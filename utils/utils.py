@@ -25,7 +25,6 @@ def sigmoid(x):
 def sigmoid_derivative(x):
     """
     Compute the gradient (also called the slope or derivative) of the sigmoid function with respect to its input x.
-    You can store the output of the sigmoid function into variables and then use it to calculate the gradient.
     
     Arguments:
     x -- A scalar or numpy array
@@ -45,9 +44,8 @@ def sigmoid_derivative(x):
   #  softmax
 
 def softmax(x):
-    """Calculates the softmax for each row of the input x.
-
-    Your code should work for a row vector and also for matrices of shape (n, m).
+    """
+    Calculates the softmax for each row of the input x.
 
     Argument:
     x -- A numpy matrix of shape (n,m)
@@ -63,15 +61,13 @@ def softmax(x):
     # Create a vector x_sum that sums each row of x_exp. Use np.sum(..., axis = 1, keepdims = True).
     x_sum = np.sum(x_exp, axis=1, keepdims=True)
     
-    # Compute softmax(x) by dividing x_exp by x_sum. It should automatically use numpy broadcasting.
+    # Compute softmax(x) by dividing x_exp by x_sum. 
     s = x_exp/x_sum
 
-    
-    
     return s
 
 
- #  L1 Loss
+ #  L1 Loss 
 
 def L1(yhat, y):
     """
@@ -80,7 +76,7 @@ def L1(yhat, y):
     y -- vector of size m (true labels)
     
     Returns:
-    loss -- the value of the L1 loss function defined above
+    loss -- the value of the L1 loss function
     """
     
 
@@ -99,7 +95,7 @@ def L2(yhat, y):
     y -- vector of size m (true labels)
     
     Returns:
-    loss -- the value of the L2 loss function defined above
+    loss -- the value of the L2 loss function
     """
     
 
